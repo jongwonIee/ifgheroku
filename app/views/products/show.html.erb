@@ -1,0 +1,5 @@
+<% @product.each do |product| %>
+    <%= product.title_ko %>
+    <%= product.percent_error %>
+    <img src="<%= product.URL %>">
+<% end %>
