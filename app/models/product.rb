@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
   def self.search(search)
-    where("title_ko LIKE ?", "%#{search}%")
+      where("title_ko LIKE ?", "%#{search}%")
   end
 
   def self.ensearch(search)

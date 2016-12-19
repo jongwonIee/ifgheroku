@@ -1,5 +1,13 @@
-<% @product.each do |product| %>
-    <%= product.title_en %>
-    <%= product.percent_error %>
-    <img src="<%= product.URL %>">
-<% end %>
+<p>
+  <% unless @product.nil? %>
+    <% @product.each do |product| %>
+        <img src="<%= product.URL %>"> <br />
+        <%= product.title_en %>'s first week audience expectation is <br />
+        <%= (product.expectation).round(0) %>. <br />
+        Actual Number of Audience: <%= product.fweek %> <br />
+        Error Rate: <%= (product.percent_error).round(1) %>%
+    <% end %>
+  <% else %>
+    Please make a valid input.
+  <% end %>
+</p>

@@ -1,7 +1,11 @@
 class ProductsController < ApplicationController
 
   def show
-    @product = Product.search(params[:search])
+    if params[:search].length > 0
+      @product = Product.search(params[:search])
+    else
+      @product = nil
+    end
   end
 
   # for updating, downloading csv
