@@ -24,5 +24,10 @@ class ProductsController < ApplicationController
     redirect_to root_url, notice:'Products imported.'
   end
 
-
+  def search
+    respond_to do |format|     
+      format.html     
+      format.json { @titles = Product.search(params[:term]) }
+    end
+  end
 end

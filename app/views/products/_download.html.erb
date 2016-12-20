@@ -1,0 +1,25 @@
+
+<h2>Movie DB top100</h2>
+
+<p>
+  <%= link_to "Download as CSV", products_path(format: "csv") %>
+</p>
+
+<table id="products">
+  <tr>
+    <th>title_ko</th>
+    <th>released_on</th>
+    <th>fweek</th>
+    <th>expectation</th>
+    <th>percent_error</th>
+  </tr>
+  <% @products.each do |product| %>
+      <tr>
+        <td><%= product.title_ko %></td>
+        <td><%= product.released_on.strftime("%B %e, %Y") %></td>
+        <td><%= product.fweek %></td>
+        <td><%= product.expectation %></td>
+        <td><%= product.percent_error %></td>
+      </tr>
+  <% end %>
+</table>
