@@ -29,7 +29,9 @@
     }
   }
 }
-
+.yellow {
+  color: #fff568;
+}
 .center{
   display: -webkit-flex; /* Safari */
   display: flex;
@@ -41,13 +43,22 @@
   -webkit-flex-direction: column; /* Safari */
   flex-direction:         column;
   height:80%;
+  font-weight: 100;
   .title {
-  font-family:'NotoSansKR',sans-serif;
+    font-family:'NotoSansKR',sans-serif;
     font-size: 35pt; 
     color: #FFFFFF;
+    font-weight: 100;
     .bold {
       font-weight: bold;
     }
+  }
+  .content {
+    margin-top: 20px;
+    font-family:'NotoSansKR',sans-serif;
+    font-size: 21pt; 
+    color: #FFFFFF;
+    font-weight: 100;
   }
 
   .search, .recommend{
