@@ -25,8 +25,8 @@ class ProductsController < ApplicationController
   end
 
   def search
-    respond_to do |format|     
-      format.html     
+    respond_to do |format|
+      format.html
       format.json { @titles = Product.search(params[:term]) }
     end
   end

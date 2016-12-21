@@ -53,7 +53,24 @@
   .search, .recommend{
     margin-top: 20px;
   }
-
+  #custom-search-input, #title-search-txt, #title-search-result{
+  font-family:'NotoSansKR',sans-serif;
+    font-size: 18pt; 
+    color: #3c1052 !important;
+  }
+  #ui-id-1{
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  -webkit-flex-direction: column; /* Safari */
+  flex-direction:         column;
+  -webkit-justify-content: flex-start; /* Safari */
+  justify-content:         flex-start;}
+  .ui-menu-item-wrapper{
+    float:left;
+    font-family:'NotoSansKR',sans-serif;
+    font-size: 18pt; 
+    color: #3c1052 !important;
+  }
   .recommend{
     display: -webkit-flex; /* Safari */
     display: flex;
