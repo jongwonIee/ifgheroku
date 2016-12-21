@@ -23,6 +23,7 @@ class EnproductsController < ApplicationController
   private
 
   def variables
+    @image = '/en'
     @home = '/en'
     @link='/'
     @language='Korean'

@@ -13,7 +13,7 @@
     </div>
     <div class="recommend_list">
       <% @recommends.sample(3).each do |recommend| %>
-          <%= link_to recommend ,"/show?search=#{recommend}"%> &nbsp
+          <%= link_to recommend ,"/en/show?search=#{recommend}"%> &nbsp
       <% end %>
     </div>
   </div>
