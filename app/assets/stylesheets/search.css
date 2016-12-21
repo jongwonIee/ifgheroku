@@ -1,4 +1,4 @@
-.title-search input { 
+.title-search input {
 width: 100%;
 font-size: 1em;
 padding: .5em 1.3em;
@@ -6,17 +6,17 @@ background: transparent;
 border: 1px solid #ddd;
 border-radius: 2em;
 font-family: hangang;
-color: #ddd; 
-}  
+color: #ddd;
+}
 
 input::-webkit-input-placeholder {
 text-align: left;
-color: #ddd; 
-}  
+color: #ddd;
+}
 
 .title-search input-placeholder {
-color:#ddd; 
-}  
+color:#ddd;
+}
 
 #check_search {
 padding: .5em 1.3em;
@@ -26,13 +26,13 @@ border-radius: 40em;
 font-family: hangang;
 color: #ddd;
 margin-bottom: 1px;
-outline: none; 
-}  
+outline: none;
+}
 
 .title-search input:focus {
 border-color: #A5CEF5;
-outline: none; 
-}  
+outline: none;
+}
 
 .title-search .results .ui-widget-content {
 background: #fff;
@@ -42,8 +42,8 @@ box-shadow: 0 .1em .2em rgba(187, 187, 187, 0.64);
 line-height: 1.2;
 max-height: 20em;
 overflow: hidden;
-overflow-y: auto; 
-}  
+overflow-y: auto;
+}
 
 .title-search .results .ui-menu-item {
 font-family: hangang;
@@ -52,32 +52,34 @@ position: relative;
 border: 0;
 border-left: 5px solid transparent;
 position: relative;
-height: 3em; 
-} 
+height: 3em;
+}
 
 .title-search .results .ui-state-focus {
 background: #fff;
 border-left-color: #08c;
 font-weight: 300;
-color: #08c; }    
+color: #08c;
+}
 
-.title-search .results .ui-menu-item .name { 
-color: #555; 
-}  
+.title-search .results .ui-menu-item .name {
+color: #555;
+}
 
-.title-search .results .ui-menu-item .prof { 
+.title-search .results .ui-menu-item .prof {
 font-size: .8em;
 text-transform: uppercase;
 color: #aaa;
 margin-top: .6em;
-letter-spacing: 1px; 
-}  
+letter-spacing: 1px;
+}
 
-.title-search .results .ui-menu-item .division { 
+.title-search .results .ui-menu-item .division {
 font-size: .8em;
 color: #aaa;
-margin-top: .5em; 
-}  
+margin-top: .5em;
+}
 
-.title-search .results .ui-state-focus .division, .title-search .results .ui-state-focus .prof, .title-search .results .ui-state-focus .name {
-color: #08c; }
+.title-search .results .ui-state-focus .division,.title-search .results .ui-state-focus .prof,.title-search .results .ui-state-focus .name {
+color: #08c;
+}

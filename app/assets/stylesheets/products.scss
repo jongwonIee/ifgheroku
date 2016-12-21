@@ -1,6 +1,20 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html, body {
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
+  @importurl(htp:/fonts.googleapis.com/earlyacces/notosanskr.cs);
+  font-family:'NotoSansKR',sans-serif;
+  background-color: transparent;
+  margin: 0px !important;
+}
+html {
+  background-image: asset-url('IFG_bg.png');
+  background-size: 100% 100%;
+  background-repeat:   no-repeat;
+ }
 .header{
   margin: 0px 20px 0px 20px;
   display: -webkit-flex; /* Safari */
