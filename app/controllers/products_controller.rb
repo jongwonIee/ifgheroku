@@ -45,6 +45,7 @@ class ProductsController < ApplicationController
   private
 
   def variables
+    @home = '/'
     @link = '/en'
     @language = 'English'
   end
