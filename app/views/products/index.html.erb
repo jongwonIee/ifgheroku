@@ -1,3 +1,5 @@
+<%#= render 'import' %>
+
 <div class="center">
   <div class="title">
    찾고싶은 <span class="bold">해외 다양성 영화</span>를 검색해보세요
@@ -9,15 +11,15 @@
 
   <div class="recommend">
     <div class="recommend_label">
-     추천 
+     추천 &nbsp
     </div>
     <div class="recommend_list">
     <% @recommends.sample(3).each do |recommend| %> 
-    <%= link_to recommend ,"/show?search=#{recommend}"%>
+    <%= link_to recommend ,"/show?search=#{recommend}"%> &nbsp
     <% end %>
     </div>
   </div>
 </div>
-<%#= render 'import' %>
+
 
 <%#= render 'download' %>

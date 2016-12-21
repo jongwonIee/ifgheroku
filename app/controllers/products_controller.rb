@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
-  
+  before_filter :variables
+
   def about
   end
 
@@ -14,7 +15,8 @@ class ProductsController < ApplicationController
   # for updating, downloading csv
 
   def index
-    @recommends = ['위플래쉬','싱 스트리트','드림 쏭','비긴 어게인','플로렌스','베리 굿 걸','크리미널','보이후드','우먼 인 골드','대니쉬 걸','꾸뻬씨의 행복여행','장남감이 살아있다','
+
+    @recommends = ['위플래쉬','싱 스트리트','드림 쏭','비긴 어게인','플로렌스','베리 굿 걸','크리미널','보이후드','우먼 인 골드','대니쉬 걸','꾸뻬씨의 행복여행','장난감이 살아있다','
 빅 아이즈','
 카페 소사이어티','
 드레스메이커','
@@ -38,5 +40,12 @@ class ProductsController < ApplicationController
       format.html
       format.json { @titles = Product.search(params[:term]) }
     end
+  end
+
+  private
+
+  def variables
+    @link = '/en'
+    @language = 'English'
   end
 end

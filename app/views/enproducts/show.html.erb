@@ -1,3 +1,23 @@
+<div class="center">
+  <% unless @product.nil? %>
+      <% @product.each do |product| %>
+          <img src="<%= product.URL %>"> <br />
+          <div class="title">
+            <span class="bold"><%= product.title_en %></span>'s first week audience expectation is <br />
+            <span class="yellow"> <%= (product.expectation).round(0) %></span> <br />
+          </div>
+          <div class="content">
+            Actual Number of Audience: <%= product.fweek %> <br />
+            Error Rate: <%= (product.percent_error).round(1) %>%
+          </div>
+      <% end %>
+  <% else %>
+      <div class="title">
+        Please make a valid input.
+      </div>
+  <% end %>
+</div>
+
 <p>
   <% unless @product.nil? %>
     <% @product.each do |product| %>

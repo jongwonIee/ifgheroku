@@ -1,5 +1,23 @@
-<h1>Indie Film Genie</h1>
+<div class="center">
+  <div class="title">
+    Search an <span class="bold">Indie Film </span>that you want to know about.
+  </div>
 
-<h2>Search</h2>
+  <div class="search">
+    <%= render 'form_en'%>
+  </div>
 
-<%= render 'form'%>
+  <div class="recommend">
+    <div class="recommend_label">
+      Recommendations &nbsp
+    </div>
+    <div class="recommend_list">
+      <% @recommends.sample(3).each do |recommend| %>
+          <%= link_to recommend ,"/show?search=#{recommend}"%> &nbsp
+      <% end %>
+    </div>
+  </div>
+</div>
+<%#= render 'import' %>
+
+<%#= render 'download' %>
