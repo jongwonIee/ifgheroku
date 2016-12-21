@@ -12,7 +12,9 @@
      추천 
     </div>
     <div class="recommend_list">
-     asd
+    <% @recommends.sample(3).each do |recommend| %> 
+    <%= link_to recommend ,"/show?search=#{recommend}"%>
+    <% end %>
     </div>
   </div>
 </div>
