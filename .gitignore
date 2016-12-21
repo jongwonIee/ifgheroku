@@ -25,7 +25,7 @@
 .env
 *.DS_Store
 
-
+/public/assets
 
 # Created by https://www.gitignore.io/api/rubymine
 

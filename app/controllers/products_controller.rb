@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+  
+  def about
+  end
 
   def show
     if params[:search].length > 0
