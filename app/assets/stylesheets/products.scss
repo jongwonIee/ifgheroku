@@ -101,11 +101,17 @@ html {
   flex-direction:         column;
   -webkit-justify-content: flex-start; /* Safari */
   justify-content:         flex-start;}
+  li.ui-menu-item:hover {
+     color:#fff568;
+  }
   .ui-menu-item-wrapper{
     float:left;
     font-family:'NotoSansKR',sans-serif;
     font-size: 18pt; 
-    color: #3c1052 !important;
+    color: #3c1052; 
+  }
+  .ui-menu-item-wrapper:hover{
+    color:#fff568 !important;
   }
   .recommend{
     display: -webkit-flex; /* Safari */
