@@ -1,4 +1,3 @@
-
 <h2>Movie DB top100</h2>
 
 <p>
@@ -8,6 +7,7 @@
 <table id="products">
   <tr>
     <th>title_ko</th>
+    <th>title_en</th>
     <th>released_on</th>
     <th>fweek</th>
     <th>expectation</th>
@@ -16,6 +16,7 @@
   <% @products.each do |product| %>
       <tr>
         <td><%= product.title_ko %></td>
+        <td><%= product.title_en %></td>
         <td><%= product.released_on.strftime("%B %e, %Y") %></td>
         <td><%= product.fweek %></td>
         <td><%= product.expectation %></td>

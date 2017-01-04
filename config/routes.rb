@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/home/about' => 'products#about'
   get '/products/search' => 'products#search'
   get '/enproducts/search' => 'enproducts#search'
+  get '/admin' => 'products#admin'
   resources :products do
     collection { post :import}
   end
