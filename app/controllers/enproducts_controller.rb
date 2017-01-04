@@ -1,7 +1,6 @@
 class EnproductsController < ApplicationController
   before_filter :variables
   def index
-
     @recommends = ['Whiplash', 'Sing Street', 'Rock Dog', 'Begin Again', 'Florence Foster Jenkins', 'Very Good Girls', 'Criminal', 'Boyhood', 'Women in Gold', 'The Danish Girl', 'Hector and the Search for Happiness', 'Foosball', 'Big Eyes', 'Cafe Society', 'The Dressmaker', 'Before I go to sleep', 'Chef']
   end
 
