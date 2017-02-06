@@ -23,4 +23,5 @@ class Product < ApplicationRecord
       Product.create! row.to_hash
     end
   end
+
 end

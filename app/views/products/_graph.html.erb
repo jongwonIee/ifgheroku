@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+
+<%= content_tag :div, '', id: 'products_chart', data: {products: @products} %>
+
+<table id="products">
+  <tr>
+    <th>title_ko</th>
+    <th>title_en</th>
+    <th>released_on</th>
+    <th>fweek</th>
+    <th>expectation</th>
+    <th>percent_error</th>
+  </tr>
+  <% @products.each do |product| %>
+      <tr>
+        <td><%= product.title_ko %></td>
+        <td><%= product.title_en %></td>
+        <td><%= product.released_on.strftime("%B %e, %Y") %></td>
+        <td><%= product.fweek %></td>
+        <td><%= product.expectation %></td>
+        <td><%= product.percent_error %></td>
+      </tr>
+  <% end %>
+</table>
+
+<script>
+  new Morris.Line({
+  // ID of the element in which to draw the chart.
+  element: 'products_chart',
+  // Chart data records -- each entry in this array corresponds to a point on
+  // the chart.
+  data: $('#products_chart').data('products'),
+  // The name of the data record attribute that contains x-values.
+  xkey: ['released_on'],
+  // A list of names of data record attributes that contain y-values.
+  ykeys: ['fweek', 'expectation', 'percent_error', 'preview'],
+  // Labels for the ykeys -- will be displayed when you hover over the
+  // chart.
+  labels: ['first week audience','expectation', 'percent_error', 'preview'],
+
+  hoverCallback: ['title_en'],
+  });
+</script>
