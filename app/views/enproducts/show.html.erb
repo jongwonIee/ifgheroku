@@ -1,7 +1,7 @@
 <div class="center">
   <% unless @product.nil? %>
       <% @product.each do |product| %>
-          <%= image_tag("filename_#{product.id-1}.png", size: "174x248") %><br />
+          <%= image_tag("filename_#{product.id-1}.jpg", size: "174x248") %><br />
           <div class="title">
             <span class="bold"><%= product.title_en %></span>'s first week audience expectation is <br />
             <span class="yellow"> <%= (product.expectation).round(0) %></span> <br />
