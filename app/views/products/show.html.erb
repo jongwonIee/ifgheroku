@@ -1,19 +1,19 @@
 <div class="center">
-    <% unless @product.nil? %>
+  <% unless @product.nil? %>
       <% @product.each do |product| %>
-        <img src="<%= product.URL %>"> <br />
-        <div class="title">
-          <span class="bold"><%= product.title_ko %></span>의 첫 주 예상 관객 수는 <br />
-          <span class="yellow"> <%= (product.expectation).round(0) %></span>명 입니다. <br />
-        </div>
-        <div class="content">
-        실제 관객 수: <%= product.fweek %> <br />
-        오차율: <%= (product.percent_error).round(1) %>%
-        </div>
+          <%= image_tag("filename_#{product.id-1}.png", size: "174x248") %><br />
+          <div class="title">
+            <span class="bold"><%= product.title_ko %></span>의 첫 주 예상 관객 수는 <br />
+            <span class="yellow"> <%= (product.expectation).round(0) %></span>명 입니다. <br />
+          </div>
+          <div class="content">
+            실제 관객 수: <%= product.fweek %> <br />
+            오차율: <%= (product.percent_error).round(1) %>%
+          </div>
       <% end %>
-    <% else %>
+  <% else %>
       <div class="title">
         검색어를 입력해 주세요.
       </div>
-    <% end %>
+  <% end %>
 </div>
